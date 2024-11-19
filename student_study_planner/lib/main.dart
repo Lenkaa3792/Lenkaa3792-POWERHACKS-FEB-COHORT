@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'screens/home_screen.dart';
+import 'screens/detail_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,33 +17,11 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         fontFamily: 'Roboto',
       ),
-      home: const MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Student Study Planner'),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Image.asset('assets/images/logo.png'),
-            const SizedBox(height: 20),
-            const Text(
-              'Welcome to the Student Study Planner!',
-              style: TextStyle(fontSize: 24),
-            ),
-          ],
-        ),
-      ),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const HomeScreen(),
+        '/details': (context) => const DetailScreen(),
+      },
     );
   }
 }
