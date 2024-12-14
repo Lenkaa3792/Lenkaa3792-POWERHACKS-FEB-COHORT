@@ -1,0 +1,44 @@
+name: student_study_planner
+description: "A Flutter project for a student study planner."
+
+# Prevents the package from being accidentally published to pub.dev
+publish_to: 'none'
+
+# Version and build number for the application
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  provider: ^6.1.2
+  sqflite: ^2.0.0+4
+  path: ^1.8.3
+  http: ^1.2.2 # For API service functionality
+  # Add other dependencies as needed
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+
+  # Assets for the application
+  assets:
+    - assets/images/logo.png
+
+  # Include custom fonts for the application
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto-Regular.ttf
+        - asset: assets/fonts/Roboto-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Roboto-Italic.ttf
+          style: italic
+
